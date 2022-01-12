@@ -780,15 +780,89 @@ class CSCPickerState extends State<CSCPicker> {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  countryDropdown(),
                   SizedBox(
-                    height: 10.0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 26, vertical: 8),
+                      child: Wrap(children: [
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Country',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Card(
+                              shadowColor: Colors.white,
+                              elevation: 2,
+                              child: countryDropdown()),
+                        ),
+                      ]),
+                    ),
                   ),
-                  stateDropdown(),
                   SizedBox(
-                    height: 10.0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 26, vertical: 8),
+                      child: Wrap(children: [
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'State',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Card(
+                              shadowColor: Colors.white,
+                              elevation: 2,
+                              child: stateDropdown()),
+                        ),
+                      ]),
+                    ),
                   ),
-                  cityDropdown()
+                  SizedBox(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 26, vertical: 8),
+                      child: Wrap(children: [
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'City',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Card(
+                              shadowColor: Colors.white,
+                              elevation: 2,
+                              child: cityDropdown()),
+                        ),
+                      ]),
+                    ),
+                  ),
+                  // SizedBox(
+                  //   height: 10.0,
+                  // ),
+                  // stateDropdown(),
+                  // SizedBox(
+                  //   height: 10.0,
+                  // ),
+                  // cityDropdown()
                 ],
               )
             : Column(
